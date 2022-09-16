@@ -8,6 +8,10 @@ public class Student extends People {
 		this.studentNo = studentNo;
 	}
 	
+	public Student(int i, String string) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public int getStudentNo() {
 		return studentNo;
 	}

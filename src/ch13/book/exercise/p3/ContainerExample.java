@@ -1,6 +1,4 @@
-package ch13.ex.Q3;
-
-import java.awt.Container;
+package ch13.book.exercise.p3;
 
 public class ContainerExample {
 	public static void main(String[] args) {

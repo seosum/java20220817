@@ -1,4 +1,4 @@
-package ch13.ex.Q2;
+package ch13.book.exercise.p2;
 
 public class ContainerExample {
 	public static void main(String[] args) {
