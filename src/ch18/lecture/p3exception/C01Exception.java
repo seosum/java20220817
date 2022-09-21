@@ -1,5 +1,6 @@
 package ch18.lecture.p3exception;
 
+import java.io.FileOutputStream;
 import java.io.OutputStream;
 
 public class C01Exception {
