@@ -1,30 +1,48 @@
 package ch18.lecture.p3exception;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
 
 public class C02Exception {
 public static void main(String[] args){
-	Output
+	OutputStream os = null;
+	InputStream is = null;
+	try {
 		String name = "C:\\Users\\user\\Desktop\\output\\output5.txt";
-		OutputStream os = new FileOutputStream(name);
+		os = new FileOutputStream(name);
+		is = new FileInputStream("");
 
 		os.write(99); // 만약 exception 발생시 close코드까지 실행되지 못함
 		os.write(88);
 
-	}catch(
-
-	Exception e)
-	{
+	}catch (Exception e) {
 		e.printStackTrace();
-	}finally
-	{
+	}finally { 
+	// 꼭 실행해야 하는 코드는 finally 블럭에 작성
+	// os.close에서 null pointexception이 날수도 있으니 
+	//	os != null 을 작성해줘야함 
+		try {
+			if (os != null) {
+				os.close();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		
-		os.close에서 null pointexception이 날수도 있으니 
-		os != null 을 작성해줘야함 
-		
-	꼭 실행해야 하는 코드는 finally 블럭에 작성
-	os.close(); // close도 checkexception으로 발생할수있어서 try~catch문으로 잡아줘야함
+		try {
+			if (is != null) {	
+				is.close(); 
+			}
+	// close도 checkexception으로 발생할수있어서 try~catch문으로 잡아줘야함
 
-	// 안전하지 않은 방식 
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
+}
 }

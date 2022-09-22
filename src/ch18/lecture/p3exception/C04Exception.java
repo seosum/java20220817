@@ -1,5 +1,8 @@
 package ch18.lecture.p3exception;
 
+import java.io.PrintWriter;
+import java.util.Scanner;
+
 public class C04Exception {
 	public static void main(String[] args) {
 		// 생성시 checked exception 처리하지 않아도 되고
@@ -8,11 +11,16 @@ public class C04Exception {
 		// try () 변수명 나열힐 수 있음
 		// java 9부터 가능
 		
-		// 그림파일은 문자로 작성된게 아님
-		// 어차피 txt도 바이트의 ㅈ;ㅂ기
 		final Scanner scanner = new Scanner("");
-		try (
-						
-				)
+		PrintWriter pw = new PrintWriter(System.out); // final 키워드 생략 가능
+		
+		try (scanner; pw;) {
+			// 일 함...
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
 	}
 }

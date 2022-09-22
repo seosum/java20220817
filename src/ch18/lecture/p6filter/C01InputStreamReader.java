@@ -2,8 +2,13 @@
 package ch18.lecture.p6filter;
 
 import java.io.FileInputStream;
+<<<<<<< HEAD
 import java.io.InputStreamReader;
 import java.io.Reader;
+=======
+import java.io.Reader;
+import java.io.InputStreamReader;
+>>>>>>> f2981821d236d7abbe34bc01d2c6f728034ddb45
 
 
 public class C01InputStreamReader {
